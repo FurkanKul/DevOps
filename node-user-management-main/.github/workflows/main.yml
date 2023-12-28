@@ -26,9 +26,9 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build -t ${{ secrets.DOCKER_REGISTRY }}/your-app-name:${{ github.sha }} .
+        docker build -t ${{ secrets.DOCKER_REGISTRY }}/furkankul/project_1:${{ github.sha }} .
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker push ${{ secrets.DOCKER_REGISTRY }}/your-app-name:${{ github.sha }}
+        docker push ${{ secrets.DOCKER_REGISTRY }}/furkankul/project_1:${{ github.sha }}
       env:
         NODE_ENV: production
 
